@@ -174,6 +174,9 @@ df <- df %>%
 df_nation <- df
 
 # export data ----
+# create folder if not existing
+dir.create("./data", showWarnings = F)
+
 # export as csv
 write.table(df_site_raw, file = "./data/Belgium_export-site_raw.csv", sep = ";", dec = ".",
             col.names = TRUE, row.names = FALSE)
@@ -195,6 +198,9 @@ saveRDS(list(df_site_raw, df_site, df_nation),
         file = "./data/Belgium_export.rds")
 
 # visuals ----
+# create folder if not existing
+dir.create("./plot", showWarnings = F)
+
 ## viral cc ----
 plot <- df_site_raw %>%
   filter(siteName %in% c("Brussels-North", "Brussels-South")) %>%
