@@ -14,7 +14,7 @@
 
 # Load packages ----
 # specify package location
-# .libPaths( "//sciensano.be/fs/1150_EPIVG_EpiInfect/15_WBE/PROJECTS/CodeLibraryR/librairies/R/4.5.2" )
+# .libPaths( "//sciensano.be/fs/1150_EPIVG_EpiInfect/15_WBE/PROJECTS/CodeLibraryR/librairies/R/4.5.3" )
 
 # select packages
 pkgs <- c("dplyr", "tidyr", "zoo", "writexl", "ggplot2")
@@ -311,3 +311,4 @@ plot
 # save
 ggsave(file="./plot/Graph_be-bx_north_nation-viral_ratio.png",
        plot, width = 21, height = 12, dpi = 200)
+
